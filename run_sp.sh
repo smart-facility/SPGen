@@ -4,5 +4,5 @@
 SEED=$1
 
 # running the synthetic population
-java -jar syntheticPopulation.jar $SEED "2006_cd.csv"
+java -jar SPGen.jar $SEED "2006_cd.csv"
 
