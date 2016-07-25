@@ -352,6 +352,36 @@ public class ArrayHandler {
 	}
 	
 	/**
+	 * normalises non-negative elements in an array. If an element in input array is negative, its value is -1.0 in the output double array.
+	 * 
+	 * @param array
+	 * @return
+	 */
+	public static double[] normaliseArray(double[] array) {
+		double[] normalisedArray = new double[array.length];
+		
+		double sum = sumPositiveInArray(array);
+		if (sum==0) {
+			for (int i=0; i<=array.length-1; i++) {
+				if (array[i]<0) {
+					normalisedArray[i] = (double)-1;
+				} else {
+					normalisedArray[i] = (double)0;
+				}
+			}
+				
+		} else {
+			for (int i=0; i<=array.length-1; i++)
+				if (array[i]<0) 
+					normalisedArray[i] = (double)-1;
+				else
+					normalisedArray[i] = (double)array[i]/(double)sum;
+		}
+		
+		return normalisedArray;
+	}
+	
+	/**
 	 * returns the sum of positive values in an integer array. For example,
 	 * sumPositiveInArray(new int[] {-1,2,3}) returns 5;
 	 * 
@@ -361,6 +391,24 @@ public class ArrayHandler {
 	 */
 	public static int sumPositiveInArray(int[] srcArray) {
 		int sum = 0;
+		for (int i = 0; i <= srcArray.length - 1; i++) {
+			if (srcArray[i] > 0) {
+				sum = sum + srcArray[i];
+            }
+        }
+		return sum;
+	}
+	
+	/**
+	 * returns the sum of positive values in an integer array. For example,
+	 * sumPositiveInArray(new int[] {-1,2,3}) returns 5;
+	 * 
+	 * @param srcArray
+	 *            the source array.
+	 * @return
+	 */
+	public static double sumPositiveInArray(double[] srcArray) {
+		double sum = 0;
 		for (int i = 0; i <= srcArray.length - 1; i++) {
 			if (srcArray[i] > 0) {
 				sum = sum + srcArray[i];

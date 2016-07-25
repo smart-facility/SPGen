@@ -11,7 +11,32 @@ public class Individual {
 	private int age;
 	private Genders gender;
 	private HholdRelSP hhRel;
+	private int incomeWkly;
+	private transient int[][] travelDiariesWeekdays;
 	
+	/**
+	 * 
+	 * @param newId
+	 * @param newAge
+	 * @param newGender
+	 * @param newHhRel
+	 * @param newIncome
+	 */
+	public Individual(int newId, int newAge, Genders newGender, HholdRelSP newHhRel, int newIncome) {
+		this.setId(newId);
+		this.setAge(newAge);
+		this.setGender(newGender);
+		this.setHhRel(newHhRel);
+		this.setIncomeWkly(newIncome);
+	}
+	
+	/**
+	 * 
+	 * @param newId
+	 * @param newAge
+	 * @param newGender
+	 * @param newHhRel
+	 */
 	public Individual(int newId, int newAge, Genders newGender, HholdRelSP newHhRel) {
 		this.setId(newId);
 		this.setAge(newAge);
@@ -199,5 +224,25 @@ public class Individual {
 
 	public void setHhRel(HholdRelSP hhRel) {
 		this.hhRel = hhRel;
+	}
+	
+	public int getIncomeWkly() {
+		return incomeWkly;
+	}
+
+	public void setIncomeWkly(int newIncome) {
+		this.incomeWkly = newIncome;
+	}
+	
+	public int[][] getTravelDiariesWeekdays() {
+		return this.travelDiariesWeekdays;
+	}
+
+	public void setTravelDiariesWeekdays(int[][] travelDiariesWeekdays) {
+		if (travelDiariesWeekdays != null) {
+			int[][] inputTravelDiariesWeekdays = travelDiariesWeekdays.clone();
+			this.travelDiariesWeekdays = new int[inputTravelDiariesWeekdays.length][inputTravelDiariesWeekdays[0].length];
+			System.arraycopy(inputTravelDiariesWeekdays, 0, this.travelDiariesWeekdays, 0, inputTravelDiariesWeekdays.length);
+		}
 	}
 }

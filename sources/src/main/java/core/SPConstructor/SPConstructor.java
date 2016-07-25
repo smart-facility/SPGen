@@ -8,10 +8,6 @@ import java.util.Map.Entry;
 
 import core.*;
 import core.CensusTables.*;
-import core.CensusTables.Preprocessing.CDDescriptionPreprocessor;
-import core.CensusTables.Preprocessing.SLAFamiCompByTypePreprocessor;
-import core.CensusTables.Preprocessing.SLAHhRelByAgeBySexPreprocessor;
-import core.CensusTables.Preprocessing.SLAHholdCompBySizePreprocessor;
 import core.HardcodedData.*;
 import core.SyntheticPopulation.*;
 
@@ -64,7 +60,7 @@ public class SPConstructor {
 				System.out.println("Household ID " + newHholdID + " already exists in Population.hhPool. New hhold ID constructed.");
 				newHholdID = ArrayHandler.max(ArrayHandler.toInt(Population.getHhPool().keySet())) + 1;
 			}
-			Population.getHhPool().put((Integer)newHholdID, new Household(newHholdID, hhType, newResidents, zoneName, HardcodedData.getZonesNameDescription().get(zoneName)));
+			Population.getHhPool().put((Integer)newHholdID, new Household(newHholdID, hhType, newResidents, Integer.parseInt(zoneName), TargetArea.getTargetAreaDesc().get(zoneName)));
 		}
 		
 	}
@@ -1269,8 +1265,6 @@ public class SPConstructor {
 		int count = 0;
 		
 		for (Integer hhID : hhIDList) {
-			int[] hhAttribs = HouseholdPool.getPool().get(hhID);
-			HholdTypes hhType = HholdTypes.getHholdTypeFromIndex(hhAttribs[HholdAttribs.hhType.getIndex()]);
 			
 			int loneParentID = -1;
 			
@@ -1836,4 +1830,5 @@ public class SPConstructor {
 		IndividualPool.constructdAgeAvailMarried();
 //		System.out.println("\tfinish constructdAgeAvailMarried()");
 	}
+	
 }

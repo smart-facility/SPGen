@@ -9,19 +9,6 @@ import core.HardcodedData.HholdTypes;
 import core.TextFileHandler;
 
 public class ZonalSPLikeCensusTablesReader {
-	
-	private enum HhTypeFilesCol {
-		hhType(0), count(1);
-		private int colIndex;
-		private HhTypeFilesCol(int newIndex) {
-			colIndex = newIndex;
-		}
-		public int getColIndex() {
-			return colIndex;
-		}
-	}
-	
-	
 	/**
 	 * 
 	 * @param fileNameZonalCountByHhType

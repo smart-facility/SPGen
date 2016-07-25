@@ -130,7 +130,11 @@ public class IndividualPool {
 	 */
 	public static int addIndivToPool(int[] indivAttrib) {
 		int[] indivIDs = ArrayHandler.toInt(indivPool.keySet());
-		int newIndivID = indivIDs[ArrayHandler.getIndexOfMax(indivIDs)]+1;
+		
+		int newIndivID = 1;
+		if (indivIDs!=null && indivIDs.length>0) 
+			newIndivID = indivIDs[ArrayHandler.getIndexOfMax(indivIDs)]+1;
+		
 		indivPool.put(newIndivID,indivAttrib);
 		
 		return newIndivID;

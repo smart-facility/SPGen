@@ -1,13 +1,8 @@
 package core.CensusTables;
 
-import java.util.ArrayList;
-
 import core.ArrayHandler;
 import core.HardcodedData;
 import core.PostgresHandler;
-import core.CensusTables.Preprocessing.SLAFamiCompByTypePreprocessor;
-import core.CensusTables.Preprocessing.SLAHhRelByAgeBySexPreprocessor;
-import core.CensusTables.Preprocessing.SLAHholdCompBySizePreprocessor;
 import core.CensusTables.Preprocessing.ZonalSPLikeCensusTablesReader;
 import core.HardcodedData.*;
 import core.SPConstructor.ZonalSPOutputHandler;
@@ -186,31 +181,6 @@ public class CensusTables {
 		
 //		accummulateCensusTables();
 	}
-	
-	
-	/**
-	 * 
-	 */
-	public static void setCensusTablesFromStoredData(String zoneName) {
-		spLikeB22Male = null;
-		spLikeB22Female = null;
-		spLikeB24 = null;
-		spLikeB25Male = null;
-		spLikeB25Female = null;
-		spLikeB30HF = null;
-		spLikeB30NF = null;
-		
-		spLikeB22Male = SLAHhRelByAgeBySexPreprocessor.getSlaIDhhRelMaleMap().get(zoneName);
-		spLikeB22Female = SLAHhRelByAgeBySexPreprocessor.getSlaIDhhRelFemaleMap().get(zoneName);
-		spLikeB24 = SLAFamiCompByTypePreprocessor.getSlaIDHholdByTypeMap().get(zoneName);
-		spLikeB25Male = SLAFamiCompByTypePreprocessor.getSlaIDMaleByHhTypeMap().get(zoneName);
-		spLikeB25Female = SLAFamiCompByTypePreprocessor.getSlaIDFemaleByHhTypeMap().get(zoneName);
-		spLikeB30HF = SLAHholdCompBySizePreprocessor.getSlaIDHFCompBySizeMap().get(zoneName);
-		spLikeB30NF = SLAHholdCompBySizePreprocessor.getSlaIDNFCompBySizeMap().get(zoneName);
-		
-//		accummulateCensusTables();
-	}
-	
 	
 	public static boolean setCensusTablesFromReadingCSV(String zoneName) {
 		spLikeB22Male = null;

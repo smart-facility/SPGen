@@ -9,15 +9,17 @@ public class Household {
 	private HholdTypes hhType;
 	private AggreHholdTypes aggreHhType;
 	private ArrayList<Integer> residentsID;
-	private String zoneName;
-	private String zoneDescription;
+	private int areaID;
+	private String areaDescription;
+	private boolean travelDiariesChanged;
+	private int dwellingID;
 	
-	public Household(int newId, HholdTypes newHhType, ArrayList<Integer> newResidents, String newZone, String newZoneDescription) {
+	public Household(int newId, HholdTypes newHhType, ArrayList<Integer> newResidents, int newZone, String newZoneDescription) {
 		this.setId(newId);
 		this.setHhType(newHhType);
 		this.setResidentsID(newResidents);
-		this.setZoneName(newZone);
-		this.setZoneDescription(newZoneDescription);
+		this.setAreaID(newZone);
+		this.setAreaDescription(newZoneDescription);
 		this.assignAggreHholdType();
 	}
 	
@@ -268,20 +270,20 @@ public class Household {
 		this.residentsID = residentsID;
 	}
 
-	public String getZoneName() {
-		return zoneName;
+	public int getAreaID() {
+		return areaID;
 	}
 
-	public void setZoneName(String zoneName) {
-		this.zoneName = zoneName;
+	public void setAreaID(int areaID) {
+		this.areaID = areaID;
 	}
 	
-	public String getZoneDescription() {
-		return zoneDescription;
+	public String getAreaDescription() {
+		return areaDescription;
 	}
 
-	public void setZoneDescription(String zoneDescription) {
-		this.zoneDescription = zoneDescription;
+	public void setAreaDescription(String zoneDescription) {
+		this.areaDescription = zoneDescription;
 	}
 
 	public AggreHholdTypes getAggreHhType() {
@@ -290,5 +292,23 @@ public class Household {
 
 	public void setAggreHhType(AggreHholdTypes aggreHhType) {
 		this.aggreHhType = aggreHhType;
+	}
+	
+	public void setTravelDiariesChanged(boolean travelDiariesChanged) {
+		this.travelDiariesChanged = travelDiariesChanged;
+	}
+	
+	public boolean isTravelDiariesChanged() {
+		return travelDiariesChanged;
+	}
+
+
+	public int getDwellingID() {
+		return dwellingID;
+	}
+
+
+	public void setDwellingID(int dwellingID) {
+		this.dwellingID = dwellingID;
 	}
 }

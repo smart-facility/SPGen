@@ -16,13 +16,27 @@ public class HardcodedData {
 	public static String globalOutputPathPercentForZones; // = "post processing/output tables/percentForZones/";
 	public static String globalOutputPathAccumulative; // = "post processing/output tables/accumulative/";
 	
-	public static String commonInputPathFemaleByHhType = "input tables/inputTables/femaleByHhType/"; 
-	public static String commonInputPathMaleByHhType = "input tables/inputTables/maleByHhType/";
-	public static String commonInputPathHholdByHhType = "input tables/inputTables/hholdByHhType/";
-	public static String commonInputPathHhRelFemale = "input tables/inputTables/hhRelFemale/";
-	public static String commonInputPathHhRelMale = "input tables/inputTables/hhRelMale/";
-	public static String commonInputPathNFCompBySize = "input tables/inputTables/nfCompBySize/";
-	public static String commonInputPathHFCompBySize = "input tables/inputTables/hfCompBySize/";
+	public static String inputTablesPathSPGen = "input tables/inputTables/";
+	public static String inputTablesPathSPEvo = "input tables/inputTables/rates - SP evolution/";
+	public static String outputTablesPath = "post processing/output SP evolution/";
+	
+	public static String charFemaleByHhType = "femaleByHhType"; 
+	public static String charMaleByHhType = "maleByHhType";
+	public static String charHholdByHhType = "hholdByHhType";
+	public static String charHhRelFemale = "hhRelFemale";
+	public static String charHhRelMale = "hhRelMale";
+	public static String charNFCompBySize = "nfCompBySize";
+	public static String charHFCompBySize = "hfCompBySize";
+	public static String charIncByAgeBySex = "incomeByAgeBySex";
+	
+	public static String commonInputPathFemaleByHhType = inputTablesPathSPGen + charFemaleByHhType + "/"; 
+	public static String commonInputPathMaleByHhType = inputTablesPathSPGen + charMaleByHhType + "/";
+	public static String commonInputPathHholdByHhType = inputTablesPathSPGen + charHholdByHhType + "/";
+	public static String commonInputPathHhRelFemale = inputTablesPathSPGen + charHhRelFemale + "/";
+	public static String commonInputPathHhRelMale = inputTablesPathSPGen + charHhRelMale + "/";
+	public static String commonInputPathNFCompBySize = inputTablesPathSPGen + charNFCompBySize + "/";
+	public static String commonInputPathHFCompBySize = inputTablesPathSPGen + charHFCompBySize + "/";
+	public static String commonInputPathIncByAgeBySex = inputTablesPathSPGen + charIncByAgeBySex + "/";
 	
 	public static String slaInputPathFemaleByHhType = "input tables/slaInputTables/femaleByHhType/"; 
 	public static String slaInputPathMaleByHhType = "input tables/slaInputTables/maleByHhType/";
@@ -40,17 +54,8 @@ public class HardcodedData {
 	public static String ccdInputPathNFCompBySize = "input tables/ccdInputTables/nfCompBySize/";
 	public static String ccdInputPathHFCompBySize = "input tables/ccdInputTables/hfCompBySize/";
 	
-	public static String inputTablesPath = "input tables/";
-	public static String outputTablesPath = "post processing/output SP evolution/";
 	
-	public static String charFemaleByHhType = "femaleByHhType"; 
-	public static String charMaleByHhType = "maleByHhType";
-	public static String charHholdByHhType = "hholdByHhType";
-	public static String charHhRelFemale = "hhRelFemale";
-	public static String charHhRelMale = "hhRelMale";
-	public static String charNFCompBySize = "nfCompBySize";
-	public static String charHFCompBySize = "hfCompBySize";
-	
+	public static final int minusOne = -1;
 	public static final String unknown = "Unknown";
 	
 	public static void initOutputPaths() {
@@ -577,7 +582,7 @@ public class HardcodedData {
 		}
 	}
 	
-	
+	/*
 	private static HashMap<String,String> zonesNameDescription;
 	
 	public static HashMap<String,String> getZonesNameDescription() {
@@ -587,297 +592,5 @@ public class HardcodedData {
 	public static void setZonesNameDescription(HashMap<String,String> newZonesNameDescription) {
 		zonesNameDescription = newZonesNameDescription;
 	}
-	
-	public static void setZonesNameDescription() {
-		zonesNameDescription = new HashMap<String,String>();
-		zonesNameDescription.put("gs_1400508", "Green Square");
-		zonesNameDescription.put("gs_1400509", "Green Square");
-		zonesNameDescription.put("gs_1400512", "Green Square");
-		zonesNameDescription.put("gs_1400606", "Green Square");
-		zonesNameDescription.put("gs_1400607", "Green Square");
-		zonesNameDescription.put("gs_1400608", "Green Square");
-		zonesNameDescription.put("gs_1400611", "Green Square");
-		zonesNameDescription.put("gs_1400612", "Green Square");
-		zonesNameDescription.put("gs_1400615", "Green Square");
-		zonesNameDescription.put("gs_1400616", "Green Square");
-		zonesNameDescription.put("gs_1400617", "Green Square"); 
-		zonesNameDescription.put("gs_1400704", "Green Square"); 
-		zonesNameDescription.put("gs_1400705", "Green Square"); 
-		zonesNameDescription.put("gs_1400706", "Green Square"); 
-		zonesNameDescription.put("gs_1400707", "Green Square"); 
-		zonesNameDescription.put("gs_1400708", "Green Square"); 
-		zonesNameDescription.put("gs_1400709", "Green Square"); 
-		zonesNameDescription.put("gs_1400710", "Green Square"); 
-		zonesNameDescription.put("gs_1400711", "Green Square"); 
-		zonesNameDescription.put("gs_1400712", "Green Square"); 
-		zonesNameDescription.put("gs_1400713", "Green Square"); 
-		zonesNameDescription.put("gs_1400714", "Green Square"); 
-		zonesNameDescription.put("gs_1400715", "Green Square"); 
-		zonesNameDescription.put("gs_1400716", "Green Square"); 
-		zonesNameDescription.put("gs_1400717", "Green Square"); 
-		zonesNameDescription.put("gs_1400718", "Green Square"); 
-		zonesNameDescription.put("gs_1400719", "Green Square"); 
-		zonesNameDescription.put("gs_1400720", "Green Square"); 
-		zonesNameDescription.put("gs_1400721", "Green Square"); 
-		zonesNameDescription.put("gs_1400722", "Green Square"); 
-		zonesNameDescription.put("gs_1400723", "Green Square"); 
-		zonesNameDescription.put("gs_1400812", "Green Square"); 
-		zonesNameDescription.put("gs_1400813", "Green Square"); 
-		zonesNameDescription.put("gs_1400815", "Green Square");  
-		
-		zonesNameDescription.put("rw_1430102", "Randwick");
-		zonesNameDescription.put("rw_1430103", "Randwick"); 
-		zonesNameDescription.put("rw_1430104", "Randwick"); 
-		zonesNameDescription.put("rw_1430105", "Randwick"); 
-		zonesNameDescription.put("rw_1430106", "Randwick"); 
-		zonesNameDescription.put("rw_1430107", "Randwick"); 
-		zonesNameDescription.put("rw_1430108", "Randwick"); 
-		zonesNameDescription.put("rw_1430109", "Randwick"); 
-		zonesNameDescription.put("rw_1430110", "Randwick"); 
-		zonesNameDescription.put("rw_1430111", "Randwick"); 
-		zonesNameDescription.put("rw_1430201", "Randwick"); 
-		zonesNameDescription.put("rw_1430202", "Randwick"); 
-		zonesNameDescription.put("rw_1430203", "Randwick"); 
-		zonesNameDescription.put("rw_1430204", "Randwick"); 
-		zonesNameDescription.put("rw_1430205", "Randwick"); 
-		zonesNameDescription.put("rw_1430206", "Randwick"); 
-		zonesNameDescription.put("rw_1430207", "Randwick"); 
-		zonesNameDescription.put("rw_1430208", "Randwick"); 
-		zonesNameDescription.put("rw_1430209", "Randwick"); 
-		zonesNameDescription.put("rw_1430210", "Randwick"); 
-		zonesNameDescription.put("rw_1430211", "Randwick"); 
-		zonesNameDescription.put("rw_1430212", "Randwick"); 
-		zonesNameDescription.put("rw_1430213", "Randwick"); 
-		zonesNameDescription.put("rw_1430301", "Randwick"); 
-		zonesNameDescription.put("rw_1430302", "Randwick"); 
-		zonesNameDescription.put("rw_1430303", "Randwick"); 
-		zonesNameDescription.put("rw_1430304", "Randwick"); 
-		zonesNameDescription.put("rw_1430305", "Randwick"); 
-		zonesNameDescription.put("rw_1430306", "Randwick"); 
-		zonesNameDescription.put("rw_1430307", "Randwick"); 
-		zonesNameDescription.put("rw_1430308", "Randwick"); 
-		zonesNameDescription.put("rw_1430309", "Randwick"); 
-		zonesNameDescription.put("rw_1430310", "Randwick"); 
-		zonesNameDescription.put("rw_1430311", "Randwick"); 
-		zonesNameDescription.put("rw_1430312", "Randwick"); 
-		zonesNameDescription.put("rw_1430401", "Randwick"); 
-		zonesNameDescription.put("rw_1430402", "Randwick"); 
-		zonesNameDescription.put("rw_1430403", "Randwick"); 
-		zonesNameDescription.put("rw_1430404", "Randwick"); 
-		zonesNameDescription.put("rw_1430405", "Randwick"); 
-		zonesNameDescription.put("rw_1430406", "Randwick"); 
-		zonesNameDescription.put("rw_1430407", "Randwick"); 
-		zonesNameDescription.put("rw_1430408", "Randwick"); 
-		zonesNameDescription.put("rw_1430409", "Randwick"); 
-		zonesNameDescription.put("rw_1430410", "Randwick"); 
-		zonesNameDescription.put("rw_1430411", "Randwick"); 
-		zonesNameDescription.put("rw_1430412", "Randwick"); 
-		zonesNameDescription.put("rw_1430501", "Randwick"); 
-		zonesNameDescription.put("rw_1430502", "Randwick"); 
-		zonesNameDescription.put("rw_1430503", "Randwick"); 
-		zonesNameDescription.put("rw_1430504", "Randwick"); 
-		zonesNameDescription.put("rw_1430505", "Randwick"); 
-		zonesNameDescription.put("rw_1430506", "Randwick"); 
-		zonesNameDescription.put("rw_1430507", "Randwick"); 
-		zonesNameDescription.put("rw_1430508", "Randwick"); 
-		zonesNameDescription.put("rw_1430509", "Randwick"); 
-		zonesNameDescription.put("rw_1430510", "Randwick"); 
-		zonesNameDescription.put("rw_1430511", "Randwick"); 
-		zonesNameDescription.put("rw_1430512", "Randwick"); 
-		zonesNameDescription.put("rw_1430513", "Randwick"); 
-		zonesNameDescription.put("rw_1430601", "Randwick"); 
-		zonesNameDescription.put("rw_1430602", "Randwick"); 
-		zonesNameDescription.put("rw_1430603", "Randwick"); 
-		zonesNameDescription.put("rw_1430604", "Randwick"); 
-		zonesNameDescription.put("rw_1430605", "Randwick"); 
-		zonesNameDescription.put("rw_1430606", "Randwick"); 
-		zonesNameDescription.put("rw_1430607", "Randwick"); 
-		zonesNameDescription.put("rw_1430608", "Randwick"); 
-		zonesNameDescription.put("rw_1430609", "Randwick"); 
-		zonesNameDescription.put("rw_1430610", "Randwick"); 
-		zonesNameDescription.put("rw_1430611", "Randwick"); 
-		zonesNameDescription.put("rw_1430612", "Randwick"); 
-		zonesNameDescription.put("rw_1430613", "Randwick"); 
-		zonesNameDescription.put("rw_1430701", "Randwick"); 
-		zonesNameDescription.put("rw_1430702", "Randwick"); 
-		zonesNameDescription.put("rw_1430703", "Randwick"); 
-		zonesNameDescription.put("rw_1430704", "Randwick"); 
-		zonesNameDescription.put("rw_1430705", "Randwick"); 
-		zonesNameDescription.put("rw_1430706", "Randwick"); 
-		zonesNameDescription.put("rw_1430707", "Randwick"); 
-		zonesNameDescription.put("rw_1430708", "Randwick"); 
-		zonesNameDescription.put("rw_1430709", "Randwick"); 
-		zonesNameDescription.put("rw_1430710", "Randwick"); 
-		zonesNameDescription.put("rw_1430711", "Randwick"); 
-		zonesNameDescription.put("rw_1430712", "Randwick"); 
-		zonesNameDescription.put("rw_1430801", "Randwick"); 
-		zonesNameDescription.put("rw_1430802", "Randwick"); 
-		zonesNameDescription.put("rw_1430803", "Randwick"); 
-		zonesNameDescription.put("rw_1430804", "Randwick"); 
-		zonesNameDescription.put("rw_1430805", "Randwick"); 
-		zonesNameDescription.put("rw_1430806", "Randwick"); 
-		zonesNameDescription.put("rw_1430807", "Randwick"); 
-		zonesNameDescription.put("rw_1430808", "Randwick"); 
-		zonesNameDescription.put("rw_1430809", "Randwick"); 
-		zonesNameDescription.put("rw_1430810", "Randwick"); 
-		zonesNameDescription.put("rw_1430811", "Randwick"); 
-		zonesNameDescription.put("rw_1430812", "Randwick"); 
-		zonesNameDescription.put("rw_1430901", "Randwick"); 
-		zonesNameDescription.put("rw_1430902", "Randwick"); 
-		zonesNameDescription.put("rw_1430903", "Randwick"); 
-		zonesNameDescription.put("rw_1430904", "Randwick"); 
-		zonesNameDescription.put("rw_1430905", "Randwick"); 
-		zonesNameDescription.put("rw_1430906", "Randwick"); 
-		zonesNameDescription.put("rw_1430907", "Randwick"); 
-		zonesNameDescription.put("rw_1430908", "Randwick"); 
-		zonesNameDescription.put("rw_1430909", "Randwick"); 
-		zonesNameDescription.put("rw_1430910", "Randwick"); 
-		zonesNameDescription.put("rw_1430911", "Randwick"); 
-		zonesNameDescription.put("rw_1430912", "Randwick"); 
-		zonesNameDescription.put("rw_1431001", "Randwick"); 
-		zonesNameDescription.put("rw_1431002", "Randwick"); 
-		zonesNameDescription.put("rw_1431003", "Randwick"); 
-		zonesNameDescription.put("rw_1431004", "Randwick"); 
-		zonesNameDescription.put("rw_1431005", "Randwick"); 
-		zonesNameDescription.put("rw_1431006", "Randwick"); 
-		zonesNameDescription.put("rw_1431007", "Randwick"); 
-		zonesNameDescription.put("rw_1431008", "Randwick"); 
-		zonesNameDescription.put("rw_1431009", "Randwick"); 
-		zonesNameDescription.put("rw_1431010", "Randwick"); 
-		zonesNameDescription.put("rw_1431011", "Randwick"); 
-		zonesNameDescription.put("rw_1431012", "Randwick"); 
-		zonesNameDescription.put("rw_1431101", "Randwick"); 
-		zonesNameDescription.put("rw_1431102", "Randwick"); 
-		zonesNameDescription.put("rw_1431103", "Randwick"); 
-		zonesNameDescription.put("rw_1431104", "Randwick"); 
-		zonesNameDescription.put("rw_1431105", "Randwick"); 
-		zonesNameDescription.put("rw_1431106", "Randwick"); 
-		zonesNameDescription.put("rw_1431107", "Randwick"); 
-		zonesNameDescription.put("rw_1431108", "Randwick"); 
-		zonesNameDescription.put("rw_1431109", "Randwick"); 
-		zonesNameDescription.put("rw_1431110", "Randwick"); 
-		zonesNameDescription.put("rw_1431111", "Randwick"); 
-		zonesNameDescription.put("rw_1431112", "Randwick"); 
-		zonesNameDescription.put("rw_1431113", "Randwick"); 
-		zonesNameDescription.put("rw_1431114", "Randwick"); 
-		zonesNameDescription.put("rw_1431201", "Randwick"); 
-		zonesNameDescription.put("rw_1431202", "Randwick"); 
-		zonesNameDescription.put("rw_1431203", "Randwick"); 
-		zonesNameDescription.put("rw_1431204", "Randwick"); 
-		zonesNameDescription.put("rw_1431205", "Randwick"); 
-		zonesNameDescription.put("rw_1431206", "Randwick"); 
-		zonesNameDescription.put("rw_1431207", "Randwick"); 
-		zonesNameDescription.put("rw_1431208", "Randwick"); 
-		zonesNameDescription.put("rw_1431209", "Randwick"); 
-		zonesNameDescription.put("rw_1431210", "Randwick"); 
-		zonesNameDescription.put("rw_1431211", "Randwick"); 
-		zonesNameDescription.put("rw_1431301", "Randwick"); 
-		zonesNameDescription.put("rw_1431302", "Randwick"); 
-		zonesNameDescription.put("rw_1431303", "Randwick"); 
-		zonesNameDescription.put("rw_1431304", "Randwick"); 
-		zonesNameDescription.put("rw_1431305", "Randwick"); 
-		zonesNameDescription.put("rw_1431306", "Randwick"); 
-		zonesNameDescription.put("rw_1431307", "Randwick"); 
-		zonesNameDescription.put("rw_1431308", "Randwick"); 
-		zonesNameDescription.put("rw_1431309", "Randwick"); 
-		zonesNameDescription.put("rw_1431310", "Randwick"); 
-		zonesNameDescription.put("rw_1431311", "Randwick"); 
-		zonesNameDescription.put("rw_1431312", "Randwick"); 
-		zonesNameDescription.put("rw_1431401", "Randwick"); 
-		zonesNameDescription.put("rw_1431402", "Randwick"); 
-		zonesNameDescription.put("rw_1431403", "Randwick"); 
-		zonesNameDescription.put("rw_1431404", "Randwick"); 
-		zonesNameDescription.put("rw_1431405", "Randwick"); 
-		zonesNameDescription.put("rw_1431406", "Randwick"); 
-		zonesNameDescription.put("rw_1431407", "Randwick"); 
-		zonesNameDescription.put("rw_1431408", "Randwick"); 
-		zonesNameDescription.put("rw_1431409", "Randwick"); 
-		zonesNameDescription.put("rw_1431410", "Randwick"); 
-		zonesNameDescription.put("rw_1431411", "Randwick"); 
-		zonesNameDescription.put("rw_1431412", "Randwick"); 
-		zonesNameDescription.put("rw_1431413", "Randwick"); 
-		zonesNameDescription.put("rw_1431501", "Randwick"); 
-		zonesNameDescription.put("rw_1431502", "Randwick"); 
-		zonesNameDescription.put("rw_1431503", "Randwick"); 
-		zonesNameDescription.put("rw_1431504", "Randwick"); 
-		zonesNameDescription.put("rw_1431505", "Randwick"); 
-		zonesNameDescription.put("rw_1431506", "Randwick"); 
-		zonesNameDescription.put("rw_1431507", "Randwick"); 
-		zonesNameDescription.put("rw_1431508", "Randwick"); 
-		zonesNameDescription.put("rw_1431509", "Randwick"); 
-		zonesNameDescription.put("rw_1431510", "Randwick"); 
-		zonesNameDescription.put("rw_1431511", "Randwick"); 
-		zonesNameDescription.put("rw_1431512", "Randwick"); 
-		zonesNameDescription.put("rw_1431513", "Randwick"); 
-		zonesNameDescription.put("rw_1431514", "Randwick"); 
-		zonesNameDescription.put("rw_1431515", "Randwick"); 
-		zonesNameDescription.put("rw_1431601", "Randwick"); 
-		zonesNameDescription.put("rw_1431602", "Randwick"); 
-		zonesNameDescription.put("rw_1431603", "Randwick"); 
-		zonesNameDescription.put("rw_1431604", "Randwick"); 
-		zonesNameDescription.put("rw_1431605", "Randwick"); 
-		zonesNameDescription.put("rw_1431606", "Randwick"); 
-		zonesNameDescription.put("rw_1431607", "Randwick"); 
-		zonesNameDescription.put("rw_1431608", "Randwick"); 
-		zonesNameDescription.put("rw_1431609", "Randwick"); 
-		zonesNameDescription.put("rw_1431610", "Randwick"); 
-		zonesNameDescription.put("rw_1431611", "Randwick"); 
-		zonesNameDescription.put("rw_1431612", "Randwick"); 
-		zonesNameDescription.put("rw_1431701", "Randwick"); 
-		zonesNameDescription.put("rw_1431702", "Randwick"); 
-		zonesNameDescription.put("rw_1431703", "Randwick"); 
-		zonesNameDescription.put("rw_1431704", "Randwick"); 
-		zonesNameDescription.put("rw_1431705", "Randwick"); 
-		zonesNameDescription.put("rw_1431706", "Randwick"); 
-		zonesNameDescription.put("rw_1431707", "Randwick"); 
-		zonesNameDescription.put("rw_1431708", "Randwick"); 
-		zonesNameDescription.put("rw_1431709", "Randwick"); 
-		zonesNameDescription.put("rw_1431710", "Randwick"); 
-		zonesNameDescription.put("rw_1431711", "Randwick"); 
-		zonesNameDescription.put("rw_1431712", "Randwick"); 
-		zonesNameDescription.put("rw_1431801", "Randwick"); 
-		zonesNameDescription.put("rw_1431802", "Randwick"); 
-		zonesNameDescription.put("rw_1431803", "Randwick"); 
-		zonesNameDescription.put("rw_1431804", "Randwick"); 
-		zonesNameDescription.put("rw_1431806", "Randwick"); 
-		zonesNameDescription.put("rw_1431807", "Randwick"); 
-		zonesNameDescription.put("rw_1431808", "Randwick"); 
-		zonesNameDescription.put("rw_1431809", "Randwick"); 
-		zonesNameDescription.put("rw_1431810", "Randwick"); 
-		zonesNameDescription.put("rw_1431811", "Randwick"); 
-		zonesNameDescription.put("rw_1431812", "Randwick"); 
-		zonesNameDescription.put("rw_1431814", "Randwick"); 
-		zonesNameDescription.put("rw_1430101", "Randwick");
-	}
-	
-//	public enum Zones {
-//		gs_1400508, gs_1400509, gs_1400512, gs_1400606, gs_1400607, gs_1400608, gs_1400611, gs_1400612, gs_1400615, gs_1400616, 
-//		gs_1400617, gs_1400704, gs_1400705, gs_1400706, gs_1400707, gs_1400708, gs_1400709, gs_1400710, gs_1400711, gs_1400712, 
-//		gs_1400713, gs_1400714, gs_1400715, gs_1400716, gs_1400717, gs_1400718, gs_1400719, gs_1400720, gs_1400721, gs_1400722, 
-//		gs_1400723, gs_1400812, gs_1400813, gs_1400815, 
-//		rw_1430102, rw_1430103, rw_1430104, rw_1430105, rw_1430106, rw_1430107, rw_1430108, rw_1430109, rw_1430110, rw_1430111, 
-//		rw_1430201, rw_1430202, rw_1430203, rw_1430204, rw_1430205, rw_1430206, rw_1430207, rw_1430208, rw_1430209, rw_1430210, 
-//		rw_1430211, rw_1430212, rw_1430213, rw_1430301, rw_1430302, rw_1430303, rw_1430304, rw_1430305, rw_1430306, rw_1430307, 
-//		rw_1430308, rw_1430309, rw_1430310, rw_1430311, rw_1430312, rw_1430401, rw_1430402, rw_1430403, rw_1430404, rw_1430405, 
-//		rw_1430406, rw_1430407, rw_1430408, rw_1430409, rw_1430410, rw_1430411, rw_1430412, rw_1430501, rw_1430502, rw_1430503, 
-//		rw_1430504, rw_1430505, rw_1430506, rw_1430507, rw_1430508, rw_1430509, rw_1430510, rw_1430511, rw_1430512, rw_1430513, 
-//		rw_1430601, rw_1430602, rw_1430603, rw_1430604, rw_1430605, rw_1430606, rw_1430607, rw_1430608, rw_1430609, rw_1430610, 
-//		rw_1430611, rw_1430612, rw_1430613, rw_1430701, rw_1430702, rw_1430703, rw_1430704, rw_1430705, rw_1430706, rw_1430707, 
-//		rw_1430708, rw_1430709, rw_1430710, rw_1430711, rw_1430712, rw_1430801, rw_1430802, rw_1430803, rw_1430804, rw_1430805, 
-//		rw_1430806, rw_1430807, rw_1430808, rw_1430809, rw_1430810, rw_1430811, rw_1430812, rw_1430901, rw_1430902, rw_1430903, 
-//		rw_1430904, rw_1430905, rw_1430906, rw_1430907, rw_1430908, rw_1430909, rw_1430910, rw_1430911, rw_1430912, rw_1431001, 
-//		rw_1431002, rw_1431003, rw_1431004, rw_1431005, rw_1431006, rw_1431007, rw_1431008, rw_1431009, rw_1431010, rw_1431011, 
-//		rw_1431012, rw_1431101, rw_1431102, rw_1431103, rw_1431104, rw_1431105, rw_1431106, rw_1431107, rw_1431108, rw_1431109, 
-//		rw_1431110, rw_1431111, rw_1431112, rw_1431113, rw_1431114, rw_1431201, rw_1431202, rw_1431203, rw_1431204, rw_1431205, 
-//		rw_1431206, rw_1431207, rw_1431208, rw_1431209, rw_1431210, rw_1431211, rw_1431301, rw_1431302, rw_1431303, rw_1431304, 
-//		rw_1431305, rw_1431306, rw_1431307, rw_1431308, rw_1431309, rw_1431310, rw_1431311, rw_1431312, rw_1431401, rw_1431402, 
-//		rw_1431403, rw_1431404, rw_1431405, rw_1431406, rw_1431407, rw_1431408, rw_1431409, rw_1431410, rw_1431411, rw_1431412, 
-//		rw_1431413, rw_1431501, rw_1431502, rw_1431503, rw_1431504, rw_1431505, rw_1431506, rw_1431507, rw_1431508, rw_1431509, 
-//		rw_1431510, rw_1431511, rw_1431512, rw_1431513, rw_1431514, rw_1431515, rw_1431601, rw_1431602, rw_1431603, rw_1431604, 
-//		rw_1431605, rw_1431606, rw_1431607, rw_1431608, rw_1431609, rw_1431610, rw_1431611, rw_1431612, rw_1431701, rw_1431702, 
-//		rw_1431703, rw_1431704, rw_1431705, rw_1431706, rw_1431707, rw_1431708, rw_1431709, rw_1431710, rw_1431711, rw_1431712, 
-//		rw_1431801, rw_1431802, rw_1431803, rw_1431804, rw_1431806, rw_1431807, rw_1431808, rw_1431809, rw_1431810, rw_1431811, 
-//		rw_1431812, rw_1431814, rw_1430101
-//	}
-
+	*/
 }
