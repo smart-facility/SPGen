@@ -13,3 +13,5 @@ where SEED is the seed of the pseudo-random generator and FILE_IN contains a lis
 Alternatively, under a Linux environment the following command line can also be used:
 
 ./run_sp.sh SEED
+
+The jar file is available here: https://github.com/smart-facility/SPGen/releases/tag/v1.0
